@@ -4,6 +4,7 @@
 
 # 本地运行模式
 本地web页面，搜索结果勾选后自动下载对应的文件到本地
+
 1、安装依赖
 ```shell
 pip3 install -r requirements.txt
@@ -16,6 +17,7 @@ streamlit run musicdl-streamlit-local.py
 
 # 服务器运行模式
 部署到云主机，配合nginx反向代理，提供公共下载服务
+
 1、安装依赖
 ```shell
 pip3 install -r requirements.txt
