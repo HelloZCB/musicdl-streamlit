@@ -24,7 +24,7 @@ pip3 install -r requirements.txt
 ```
 2、启动服务
 ```shell
-nohup streamlit run musicdl-streamlit-web.py --server.address=127.0.0.1
+nohup streamlit run musicdl-streamlit-web.py --server.address=127.0.0.1 &
 ```
 3、配置nginx
 ```
