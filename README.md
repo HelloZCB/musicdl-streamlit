@@ -1,4 +1,6 @@
-基于 [musicdl](https://github.com/CharlesPikachu/musicdl) 和 [streamlit](https://github.com/streamlit/streamlit) 构建的音乐下载web网页
+基于 [musicdl](https://github.com/CharlesPikachu/musicdl) 和 [streamlit](https://github.com/streamlit/streamlit) 构建的音乐下载web网页.
+
+--注意：本仓库代码仅用于学习交流，请勿用于商业用途--
 
 ![web page](https://github.com/HelloZCB/musicdl-streamlit/blob/245496b92691552f994e6db9aaa923b8ec963555/web%20page.png)
 
@@ -16,7 +18,7 @@ streamlit run musicdl-streamlit-local.py
 3、访问网址 http://127.0.0.1:8501
 
 # 服务器运行模式
-部署到云主机，配合nginx反向代理，提供公共下载服务
+部署到云主机，配合nginx反向代理，提供web下载服务
 
 1、安装依赖
 ```shell
