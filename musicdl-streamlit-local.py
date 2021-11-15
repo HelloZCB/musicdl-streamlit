@@ -24,20 +24,6 @@ for i in range(len(target_srcs)):
 config = {'logfilepath': 'musicdl.log', 'savedir': 'downloaded', 'search_size_per_source': 10, 'proxies': {}}
 client = musicdl.musicdl(config=config)
 
-
-# def make_clickable(link):
-#     text = 'Download'
-#     return f'<div><a href="{link}" download="true" type="audio/mpeg">{text}</a></div>'
-
-
-# js = JsCode("""
-# function(e) {
-#     let api = e.api;
-#     let rowCount = api.getSelectedNodes().length;
-#     window.alert('selection changed, ' + rowCount + ' rows selected');
-# };
-# """)
-
 @st.cache()
 def search_music(musicname):
     if musicname:
@@ -59,26 +45,6 @@ def search_music(musicname):
                     idx += 1
             return items, records, title
     return None, None, None
-            # df = pd.DataFrame(items, columns=title)
-            # # df['来源'] = df['来源'].apply(make_clickable)
-            # gb = GridOptionsBuilder.from_dataframe(df)
-            # gb.configure_selection(selection_mode="multiple", use_checkbox=True)
-            # gb.configure_grid_options(onSelectionChanged=js)
-            # # gb.configure_pagination()
-            # gridOptions = gb.build()
-            # # AgGrid(df, editable=True, gridOptions=gridOptions)
-            # ag = AgGrid(df,
-            #               gridOptions=gridOptions,
-            #               fit_columns_on_grid_load=True,
-            #               # enable_enterprise_modules=True,
-            #               allow_unsafe_jscode=True)
-            #               # theme='streamlit',
-            #               # key='myaggrid'
-            #               # update_mode=GridUpdateMode.SELECTION_CHANGED)
-            # st.write(ag)
-            # df = df.to_html(escape=False)
-            # st.write(df, unsafe_allow_html=True)
-        # st.success('Done!')
 
 
 music_name = st.text_input('请输入搜索关键词(歌曲名、歌手名):', value='')
@@ -125,7 +91,3 @@ if len(selected_data) > 0:
             songinfos.append(songinfo)
             download_music(songinfos)
             st.write('{} save to {}'.format(songinfo['savename'], songinfo['savedir']))
-
-
-# container = st.container()
-# my_button = container.button('开始搜索', key='start', on_click=search_music(music_name))
